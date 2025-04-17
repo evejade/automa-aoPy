@@ -2,6 +2,7 @@ import pyautogui
 import time
 import pandas as pd
 
+#define pausa autm. entre cada funcao
 pyautogui.PAUSE = 0.3
 
 pyautogui.press("win")
@@ -11,14 +12,17 @@ pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 time.sleep(3)
 
+# x e y =coordenadas
 pyautogui.click(x=791, y=494)
 pyautogui.write("oioioi@gmail.com")
 pyautogui.press("tab")
 pyautogui.write("123")
 pyautogui.press("tab")
 pyautogui.press("enter")
+#pausa toda execuçao do prog 3s
 time.sleep(3)
  
+ # le o arquivo
 tabela= pd.read_csv("produtos.csv")
 print(tabela)
 
